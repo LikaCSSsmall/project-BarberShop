@@ -554,6 +554,59 @@ button {
   display: flex;
 }
 
+
+
+.online-form {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+}
+
+
+.online-item {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  outline: transparent;
+  color: #f7f7f7;
+  font-size: 11px;
+}
+.online-item:focus {
+  border-color: var(--primary-text-color);
+}
+
+.online-item::placeholder {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.4);
+}
+
+.online-item:focus::placeholder {
+  color: var(--primary-text-color);
+}
+
+.online-input {
+  width: 270px;
+  height: 24px;
+  margin-bottom: 44px;
+  padding-bottom: 8px;
+}
+
+.online-text {
+  width: 570px;
+  height: 76px;
+  resize: none;
+  margin-bottom: 44px;
+}
+
+.online-btn {
+  color: var(--primary-text-color);
+}
+
+
 /*-------------- ONLINE----------------- */
 
 .online {
@@ -564,6 +617,7 @@ button {
 
 .online-title {
   color: var(--primary-text-color);
+  margin-bottom: 44px;
 }
 
 .contacts {
