@@ -14,13 +14,17 @@
     integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./css/media.css" />
 </head>
 
 <body>
   <header class="header">
     <div class="container header-container">
       <nav class="header-navigation">
-        <a href="./index.html" class="header-logo"><img src="./images/logo.svg" /></a>
+        <a href="./index.html" class="header-logo">
+          <svg class="header-logo-svg" width="68" height="55">
+            <use href="./images/icons.svg#icon-logo"></use>
+          </svg></a>
         <ul class="header-list list">
           <li class="header-item">
             <a href="#" class="header-link link">About</a>
@@ -36,8 +40,49 @@
           </li>
         </ul>
       </nav>
-      <a href="" class="header-tel link">+38 044 111 11 11</a>
-      <button type="button" class="header-btn btn">Online-booking</button>
+        <button type="button" class="menu-button js-open-menu" aria-expanded="false">
+           <svg class="burger-"  width="32" height="22">
+             <use href="./images/icons.svg#burger-menu"></use>
+           </svg>
+         </button>
+          <div class="menu-container js-menu-container">
+            <div class="container mobile-container">
+              <button type="button" class="mobile-menu-close btn-close js-close-menu">
+                <svg width="10" height="9">
+                  <use href="./images/icons.svg#icon-close-black"></use>
+                </svg>
+              </button>
+              <ul class="menu-navigation list">
+                <li class="menu-navigation-item"><a href="" class="menu-link">About</a></li>
+                <li class="menu-navigation-item"><a href="" class="menu-link">Services and prices</a>
+                </li>
+                <li class="menu-navigation-item"><a href="" class="menu-link">Barbers</a>
+                </li>
+                <li class="menu-navigation-item"><a href="#" class="menu-link">Contacts</a></li>
+              </ul>
+               <ul class="header-contacts-mobile list">
+                 <li class="header-contacts-item"><a href="tel:+380441111111" class="header-tel-mobile link">+38 044 111 11
+                     11</a></li>
+                 <li class="header-contacts-item"><button type="button" class="header-btn-mobile btn">Online-booking</button>
+                 </li>
+               </ul>
+               <div class="hero-soc-mobile">
+                 <ul class="hero-list list">
+                   <li class="hero-item suptitle">
+                     <a href="" target="_blank" class="hero-link-mobile link" rel="noopener noreferrer nofollow">Instagram</a>
+                   </li>
+                   <li class="hero-item">
+                     <a href="" target="_blank" class="hero-link-mobile link" rel="noopener noreferrer nofollow">Youtube</a>
+                   </li>
+                 </ul>
+               </div>
+            </div>
+          </div>
+  
+      <ul class="header-contacts list">
+        <li class="header-contacts-item"><a href="tel:+380441111111" class="header-tel  tel link">+38 044 111 11 11</a></li>
+        <li class="header-contacts-item"><button type="button" class="header-btn btn">Online-booking</button></li>
+      </ul>
     </div>
   </header>
   <main>
@@ -63,14 +108,26 @@
         </div>
       </div>
     </section>
-    <section class="about">
+   <section class="about">
       <div class="container about-container">
         <ul class="about-list list">
           <li class="about-item">
-            <img src="./images/about-img-1.jpg" alt="haircut" width="270" height="445" />
+            <picture>
+              <source srcset="../images/about-desktop.jpg 1x, ../images/about-desktop@2x.jpg 2x"
+              media="(min-width: 1200px)">
+              <source srcset="../images/about-tablet.jpg 1x, ../images/about-tablet@2x.jpg 2x"
+                media="(min-width: 768px)">
+               <img src="./images/about-img-1.jpg" alt="haircut" width="270" height="445" />
+              </picture>
           </li>
           <li class="about-item">
+            <picture>
+               <source srcset="../images/about-desktop-2.jpg 1x, ../images/about-desktop-2@2x.jpg 2x"
+                 media="(min-width: 1200px)">
+               <source srcset="../images/about-tablet-2.jpg 1x, ../images/about-tablet-2@2x.jpg 2x"
+                 media="(min-width: 768px)">
             <img src="./images/about-img-2.jpg" alt="haircut" width="270" height="445" />
+            </picture>
           </li>
         </ul>
         <div class="about-wrap">
@@ -175,7 +232,15 @@
         <h2 class="barbers-title title">Our barbers</h2>
         <ul class="barbers-list list">
           <li class="barbers-item">
+            <picture>
+              <source srcset="../images/barbers-desktop.jpg 1x, ../images/barbers-desktop@2x.jpg 2x"
+                media="(min-width: 1200px)">
+              <source srcset="../images/barbers-tablet.jpg 1x, ../images/barbers-tablet@2x.jpg 2x"
+                media="(min-width: 768px)">
+                <source srcset="../images/barbers-mobile.jpg 1x, ../images/barbers-mobile@2x.jpg 2x"
+                  media="(min-width: 480px)">
             <img src="./images/our-barbers-1.jpg" alt="barber image" width="370" height="346" />
+            </picture>
             <div class="barbers-content">
               <h3 class="barbers-item-title">John Smith</h3>
               <p class="barbers-item-text">Extreme Barber</p>
@@ -212,7 +277,15 @@
             </div>
           </li>
           <li class="barbers-item">
+            <picture>
+             <source srcset="../images/barbers-desktop-2.jpg 1x, ../images/barbers-desktop-2@2x.jpg 2x"
+               media="(min-width: 1200px)">
+             <source srcset="../images/barbers-tablet-2.jpg 1x, ../images/barbers-tablet-2@2x.jpg 2x"
+               media="(min-width: 768px)">
+             <source srcset="../images/barbers-mobile-2.jpg 1x, ../images/barbers-mobile-2@2x.jpg 2x"
+               media="(min-width: 480px)">
             <img src="./images/our-barbers-2.jpg" alt="barber image" width="370" height="346" />
+            </picture>
             <div class="barbers-content">
               <h3 class="barbers-item-title">Michele Doe</h3>
               <p class="barbers-item-text">Extreme Barber</p>
@@ -249,7 +322,15 @@
             </div>
           </li>
           <li class="barbers-item">
+            <picture>
+               <source srcset="../images/barbers-desktop-3.jpg 1x, ../images/barbers-desktop-3@2x.jpg 2x"
+                 media="(min-width: 1200px)">
+               <source srcset="../images/barbers-tablet-3.jpg 1x, ../images/barbers-tablet-3@2x.jpg 2x"
+                 media="(min-width: 768px)">
+               <source srcset="../images/barbers-mobile-3.jpg 1x, ../images/barbers-mobile-3@2x.jpg 2x"
+                 media="(min-width: 480px)">
             <img src="./images/our-barbers-3.jpg" alt="barber image" width="370" height="346" />
+            </picture>
             <div class="barbers-content">
               <h3 class="barbers-item-title">Alan Black</h3>
               <p class="barbers-item-text">Extreme Barber</p>
@@ -289,22 +370,58 @@
       </div>
     </section>
     <section class="gallery">
-      <div class="container">
+      <div class="container gallary-container">
         <p class="gallery-supitle suptitle">In Latin, "barba" means "beard"</p>
         <h2 class="visually-hidden">Gallery</h2>
         <ul class="gallery-list list">
-          <li class="gallery-item"><img src="./images/gallery-img-1.jpg" alt="barber work" width="270" height="360">
+          <li class="gallery-item">
+            <picture>
+              <source srcset="../images/gallery-desktop.jpg 1x, ../images/gallery-desktop@2x.jpg 2x"
+                media="(min-width: 1200px)">
+              <source srcset="../images/gallery-tablet.jpg 1x, ../images/gallery-tablet@2x.jpg 2x"
+                media="(min-width: 768px)">
+              <source srcset="../images/gallery-mobile.jpg 1x, ../images/gallery-mobile@2x.jpg 2x"
+                media="(min-width: 480px)">
+            <img src="./images/gallery-img-1.jpg" alt="barber work" width="270" height="360">
+            </picture>
           </li>
-          <li class="gallery-item"><img src="./images/gallery-img-2.jpg" alt="barber work" width="270" height="360">
+          <li class="gallery-item">
+             <picture>
+               <source srcset="../images/gallery-desktop-2.jpg 1x, ../images/gallery-desktop-2@2x.jpg 2x"
+                 media="(min-width: 1200px)">
+               <source srcset="../images/gallery-tablet-2.jpg 1x, ../images/gallery-tablet-2@2x.jpg 2x"
+                 media="(min-width: 768px)">
+               <source srcset="../images/gallery-mobile-2.jpg 1x, ../images/gallery-mobile-2@2x.jpg 2x"
+                 media="(min-width: 480px)">
+            <img src="./images/gallery-img-2.jpg" alt="barber work" width="270" height="360">
+             </picture>
           </li>
-          <li class="gallery-item"><img src="./images/gallery-img-3.jpg" alt="barber work" width="270" height="360">
+          <li class="gallery-item">
+             <picture>
+               <source srcset="../images/gallery-desktop-3.jpg 1x, ../images/gallery-desktop-3@2x.jpg 2x"
+                 media="(min-width: 1200px)">
+               <source srcset="../images/gallery-tablet-3.jpg 1x, ../images/gallery-tablet-3@2x.jpg 2x"
+                 media="(min-width: 768px)">
+               <source srcset="../images/gallery-mobile-3.jpg 1x, ../images/gallery-mobile-3@2x.jpg 2x"
+                 media="(min-width: 480px)">
+            <img src="./images/gallery-img-3.jpg" alt="barber work" width="270" height="360">
+             </picture>
           </li>
-          <li class="gallery-item"><img src="./images/gallery-img-4.jpg" alt="barber work" width="270" height="360">
+          <li class="gallery-item">
+             <picture>
+               <source srcset="../images/gallery-desktop-4.jpg 1x, ../images/gallery-desktop-4@2x.jpg 2x"
+                 media="(min-width: 1200px)">
+               <source srcset="../images/gallery-tablet-4.jpg 1x, ../images/gallery-tablet-4@2x.jpg 2x"
+                 media="(min-width: 768px)">
+               <source srcset="../images/gallery-mobile-4.jpg 1x, ../images/gallery-mobile-4@2x.jpg 2x"
+                 media="(min-width: 480px)">
+            <img src="./images/gallery-img-4.jpg" alt="barber work" width="270" height="360">
+             </picture>
           </li>
         </ul>
       </div>
     </section>
-    <div class="contact-wrap">
+   <div class="contact-wrap">
       <div class="container">
         <section class="online">
           <h2 class="online-title title">Online-booking</h2>
@@ -317,24 +434,37 @@
         </section>
         <section class="contacts">
           <h2 class="contacts-title title">Contacts</h2>
+          <div class="contact-container">
           <address class="contacts-address">
             <ul class="contacts-list list">
               <li class="contacts-item">
+                <svg  class="icon-svg-contacts" width="16" height="18">
+                  <use href="./images/icons.svg#icon-map-pin"></use>
+                </svg>
                 <a href="https://goo.gl/maps/DNSx9ZMqSHzAVsaaA" class="contacts-link bold link">st. Vasilkivska,
-                  7A<br />
+                  7A
                   Kyiv, 08132</a>
               </li>
               <li class="contacts-item">
+                <svg class="icon-svg-contacts" width="16" height="16">
+                  <use href="./images/icons.svg#icon-phone"></use>
+                </svg>
                 <a href="tel:+380441111111" class="contacts-link link">+38 044 111 11 11</a>
               </li>
               <li class="contacts-item">
-                <a href="mailto:barbershop@email.com" class="contacts-link link">barbershop@email.com</a>
+                <svg class="icon-svg-contacts" width="18" height="14">
+                  <use href="./images/icons.svg#icon-mail"></use>
+                </svg>
+                <a href="mailto:barbershop@email.com" class="contacts-link link barbers-mail">barbershop@email.com</a>
               </li>
             </ul>
           </address>
-          <p class="contacts-text">Working hours</p>
-          <p class="contacts-schedule">Every day from 9:00 to 22:00</p>
+          <ul class="contacts-schedule-list list">
+            <li class="contacts-schedule-item"><p class="contacts-text suptitle">Working hours</p></li>
+            <li class="contacts-schedule-item"><p class="contacts-schedule">Every day from 9:00 to 22:00</p></li>
+          </ul>
         </section>
+        </div>
       </div>
     </div>
   </main>
@@ -351,6 +481,7 @@
       </ul>
     </div>
   </footer>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>
